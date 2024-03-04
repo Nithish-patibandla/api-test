@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nithishapitest123 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nithishapitest123
+  template:
+    metadata:
+      labels:
+        app: nithishapitest123 
+    spec:
+      containers:
+        - name: nithishapitest123 
+          image: mycontainerterraform.azurecr.io/nithishapitest123
+          ports:
+          - containerPort: 5000
